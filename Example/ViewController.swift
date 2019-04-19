@@ -38,6 +38,9 @@ final class ViewController: SwipeMenuViewController {
     options.tabView.itemView.selectedTextColor = .black
     options.tabView.itemView.clipsToBounds = true
     
+    options.tabView.itemView.selectedBackgroundColor = .red
+    options.tabView.itemView.unSelectedBackgroundColor = .green
+    
     swipeMenuView.reloadData(options: options, default: nil, isOrientationChange: false)
     
     view.bringSubviewToFront(settingButton)

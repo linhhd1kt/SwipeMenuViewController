@@ -6,7 +6,7 @@ final class TabItemView: UIView {
   
   public var textColor: UIColor = UIColor(red: 140/255, green: 140/255, blue: 140/255, alpha: 1.0)
   public var selectedBackgroundColor = UIColor(red: 234/255, green: 237/255, blue: 18/255, alpha: 1.0)
-  public var notSelectedBackgroundColor = UIColor(red: 75/255, green: 75/255, blue: 75/255, alpha: 1.0)
+  public var unSelectedBackgroundColor = UIColor(red: 75/255, green: 75/255, blue: 75/255, alpha: 1.0)
   
   public var selectedTextColor: UIColor = .white
   public var container: UIView = UIView()
@@ -18,7 +18,7 @@ final class TabItemView: UIView {
         container.backgroundColor = selectedBackgroundColor
       } else {
         titleLabel.textColor = textColor
-        container.backgroundColor = notSelectedBackgroundColor
+        container.backgroundColor = unSelectedBackgroundColor
       }
     }
   }
@@ -29,7 +29,7 @@ final class TabItemView: UIView {
     super.init(frame: frame)
     
     setupLabel()
-    container.backgroundColor = notSelectedBackgroundColor
+    container.backgroundColor = unSelectedBackgroundColor
     container.layer.cornerRadius = 3
     
   }

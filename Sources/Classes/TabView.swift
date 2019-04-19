@@ -220,7 +220,7 @@ open class TabView: UIScrollView {
                 tabItemView.textColor = options.itemView.textColor
                 tabItemView.selectedTextColor = options.itemView.selectedTextColor
                 tabItemView.selectedBackgroundColor = options.itemView.selectedBackgroundColor
-                tabItemView.selectedBackgroundColor = options.itemView.notSelectedBackgroundColor
+                tabItemView.unSelectedBackgroundColor = options.itemView.unSelectedBackgroundColor
             }
 
             tabItemView.isSelected = index == currentIndex
