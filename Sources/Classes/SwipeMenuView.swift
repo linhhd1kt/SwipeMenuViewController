@@ -338,8 +338,9 @@ open class SwipeMenuView: UIView {
         NSLayoutConstraint.activate([
             tabView.topAnchor.constraint(equalTo: self.topAnchor),
             tabView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-//            tabView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            tabView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 382),
+            // change to get right space
+            // tabView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            tabView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -382),
             tabView.heightAnchor.constraint(equalToConstant: options.tabView.height)
             ])
     }
