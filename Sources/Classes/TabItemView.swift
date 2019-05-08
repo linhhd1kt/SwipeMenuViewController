@@ -68,8 +68,8 @@ final class TabItemView: UIView {
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
       titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 12),
-      titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
-      titleLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
+      titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8),
+      titleLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8),
       titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -12)
       ])
   }
