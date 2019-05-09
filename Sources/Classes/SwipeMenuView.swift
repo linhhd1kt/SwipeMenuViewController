@@ -348,7 +348,7 @@ open class SwipeMenuView: UIView {
       ])
   }
   
-  public func layoutTabView() {
+  open public func layoutTabView() {
     guard let tabView = self.tabView else { return }
     layout(tabView: tabView)
   }
