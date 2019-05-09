@@ -65,4 +65,9 @@ open class SwipeMenuViewController: UIViewController, SwipeMenuViewDelegate, Swi
         vc.didMove(toParent: self)
         return vc
     }
+  
+  open func updateRightMargin(_ value: CGFloat) {
+    swipeMenuView.options.tabView.rightMargin = value
+    swipeMenuView.layoutTabView()
+  }
 }

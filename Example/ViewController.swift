@@ -9,6 +9,8 @@ final class ViewController: SwipeMenuViewController {
   var dataCount: Int = 15
   
   @IBOutlet private weak var settingButton: UIButton!
+  @IBOutlet weak var rightMarginButton: UIButton!
+  
   
   override func viewDidLoad() {
     
@@ -19,18 +21,17 @@ final class ViewController: SwipeMenuViewController {
       self.addChild(vc)
     }
     
-
-    
     super.viewDidLoad()
     
     options.tabView.height = 60
     options.tabView.margin = 12
-    options.tabView.backgroundColor = .white
+    options.tabView.backgroundColor = .clear
     options.tabView.style = .flexible
     options.tabView.addition = .none
     options.tabView.needsAdjustItemViewWidth = false
     options.tabView.needsConvertTextColorRatio = false
     options.tabView.isSafeAreaEnabled = false
+    options.tabView.rightMargin = 0
     
     options.tabView.itemView.width = 120
     options.tabView.itemView.margin = 12
@@ -38,12 +39,13 @@ final class ViewController: SwipeMenuViewController {
     options.tabView.itemView.selectedTextColor = .black
     options.tabView.itemView.clipsToBounds = true
     
-    options.tabView.itemView.selectedBackgroundColor = .red
-    options.tabView.itemView.unSelectedBackgroundColor = .green
+    options.tabView.itemView.selectedBackgroundColor = .clear
+    options.tabView.itemView.unSelectedBackgroundColor = .clear
     
     swipeMenuView.reloadData(options: options, default: nil, isOrientationChange: false)
     
     view.bringSubviewToFront(settingButton)
+    view.bringSubviewToFront(rightMarginButton)
     
   }
   
@@ -95,7 +97,13 @@ final class ViewController: SwipeMenuViewController {
   
   override func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewControllerForPageAt index: Int) -> UIViewController {
     let vc = children[index]
+    vc.view.backgroundColor = .blue
     vc.didMove(toParent: self)
     return vc
   }
+  
+  @IBAction func toggleRightMargin(_ sender: Any) {
+    self.updateRightMargin(200)
+  }
+
 }
